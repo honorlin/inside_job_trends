@@ -1,7 +1,7 @@
 class TrendsController < ApplicationController
   def index
 
-  	@inside_jobs = InsideJob.all
+  	@inside_jobs = InsideJob.all.order("post_date desc")
 		
   end
 
