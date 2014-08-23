@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140823201910) do
+ActiveRecord::Schema.define(version: 20140823211328) do
 
   create_table "inside_jobs", force: true do |t|
     t.string   "title"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20140823201910) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "salary"
+    t.string   "company"
   end
 
 end

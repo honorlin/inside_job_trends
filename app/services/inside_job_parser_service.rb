@@ -10,6 +10,7 @@ class InsideJobParserService
 	def parse
 		doc = Nokogiri::HTML(open("http://jobs.inside.com.tw/#{@url}"))
 
+		@company = doc.css('.company-name').first.text
 		@html =  doc.css('h1').first.text
 	
 		@title = @html.split("\n")[0]
@@ -28,9 +29,8 @@ class InsideJobParserService
 		@inside_job = InsideJob.find_by({ :url => @url })
 
 		#if @inside_job.title.blank?
-		@inside_job.update_attributes({:title => @title, :salary => @salary,  :url => @url, :post_date => @post_date, :effective_date => @effective_date })
+		@inside_job.update_attributes({ :company => @company , :title => @title, :salary => @salary,  :url => @url, :post_date => @post_date, :effective_date => @effective_date })
 		#end
-
 
 
 	end

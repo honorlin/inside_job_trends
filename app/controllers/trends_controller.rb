@@ -7,9 +7,10 @@ class TrendsController < ApplicationController
 
   def analysis
 		get_inside_all_jobs_url
+
   	get_all_inside_jobs_infomation
 
-  	redirect_to "/trends/index"
+  	redirect_to root_path
   end
 
 
@@ -31,7 +32,7 @@ private
   	@inside_jobs.each do |inside_job|
 			inside_job_parser_serice = InsideJobParserService.new(inside_job.url)
   		inside_job_parser_serice.parse
-  	end
+    end
 
   end
 
