@@ -1,5 +1,5 @@
 
-<table>
+<table class="table">
 	<tr>
 		<th>刊登公司</th>
 		<th>薪資</th>
@@ -9,10 +9,10 @@
 	<tbody>
 		<% @inside_jobs.each do |inside_job| %>
 			<tr>
-				<td><%= inside_job.title %></td>
-				<td><%= inside_job.salary %></td>
-				<td><%= inside_job.post_date %></td>
-				<td><%= inside_job.effective_date %></td>
+				<td><%= link_to inside_job.title, "http://jobs.inside.com.tw/#{inside_job.url}" %></td>
+				<td><span class="btn btn-success"><%= inside_job.salary %></span></td>
+				<td><span class="btn btn-warning"><%= inside_job.post_date %></span></td>
+				<td><span class="btn btn-danger"><%= inside_job.effective_date %></span></td>
 			</tr>
 		<% end %>
 	</tbody>
