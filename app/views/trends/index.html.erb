@@ -1,5 +1,19 @@
 
-
-<% @inside_jobs.each do |inside_job| %>
-	<%= inside_job.title %> <hr />
-<% end %>
+<table>
+	<tr>
+		<th>刊登公司</th>
+		<th>薪資</th>
+		<th>刊登時間</th>
+		<th>有效日期</th>
+	</tr>
+	<tbody>
+		<% @inside_jobs.each do |inside_job| %>
+			<tr>
+				<td><%= inside_job.title %></td>
+				<td><%= inside_job.salary %></td>
+				<td><%= inside_job.post_date %></td>
+				<td><%= inside_job.effective_date %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
