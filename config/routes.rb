@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'trends/index'
+  
+  root :to => "trends#index"
   get 'trends/analysis'
 
   # The priority is based upon order of creation: first created -> highest priority.
