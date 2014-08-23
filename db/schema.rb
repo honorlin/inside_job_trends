@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140823091208) do
+ActiveRecord::Schema.define(version: 20140823201910) do
 
   create_table "inside_jobs", force: true do |t|
     t.string   "title"
     t.string   "salary_form"
     t.string   "salary_end"
-    t.string   "url"
+    t.text     "url",            limit: 255
     t.string   "post_date"
     t.string   "effective_date"
     t.datetime "created_at"
