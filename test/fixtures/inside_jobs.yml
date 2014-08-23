@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  salary_form: MyString
+  salary_end: MyString
+  url: MyString
+  post_date: MyString
+  effective_date: MyString
+
+two:
+  title: MyString
+  salary_form: MyString
+  salary_end: MyString
+  url: MyString
+  post_date: MyString
+  effective_date: MyString
