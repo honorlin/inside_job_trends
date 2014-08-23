@@ -1,3 +1,7 @@
+# 最新網路業和資訊業薪資趨勢
+
+<img src="https://dl.dropboxusercontent.com/u/75986505/GitHub/inside_job_trends/cover.png" />
+
 #根據inside job的資料
 
 http://jobs.inside.com.tw/
