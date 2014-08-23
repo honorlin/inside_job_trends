@@ -1,19 +1,16 @@
-*根據inside job的資料
+#根據inside job的資料
 
 http://jobs.inside.com.tw/
 
 來產生最新的網路業和資訊業的薪資趨勢圖
 
-*webiste : 
+#webiste : 
 
 http://inside-job-trends.herokuapp.com/
-
  
-*Development
+歡迎有興趣的一起開發
 
-rake dev:build for generate category sample & fake jobs
-
-*Contributing
+#Contributing
 
 Fork it
 Create your feature branch (git checkout -b my-new-feature)
