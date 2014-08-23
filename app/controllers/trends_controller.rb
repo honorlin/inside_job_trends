@@ -1,7 +1,40 @@
 class TrendsController < ApplicationController
   def index
 
-  inside_job_parser_serice = InsideJobParserService.new("http://jobs.inside.com.tw/jobs/5227-getmore%E4%BA%8C%E6%AC%A1%E6%99%82%E5%B0%9A%E8%A1%8C%E9%8A%B7bd%E5%AF%A6%E7%BF%92%E7%94%9F-getmore%E4%BA%8C%E6%AC%A1%E6%99%82%E5%B0%9A")
+  	@inside_jobs = InsideJob.all
+		
+  end
+
+  def analysis
+		get_inside_all_jobs_url
+  	get_all_inside_jobs_infomation
+
+  	redirect_to "/trends/index"
+  end
+
+
+private
+
+
+  def get_inside_all_jobs_url
+
+  	(1..100).each do |page|
+  		@inside_job_url_parser_service = InsideJobUrlParserService.new("http://jobs.inside.com.tw/jobs/page/#{page}")
+  		@inside_job_url_parser_service.parse
+		end 
 
   end
+
+  def get_all_inside_jobs_infomation
+  	@inside_jobs = InsideJob.select(:url).all
+  	
+  	@inside_jobs.each do |inside_job|
+			inside_job_parser_serice = InsideJobParserService.new(inside_job.url)
+  		inside_job_parser_serice.parse
+  	end
+
+  end
+
 end
+
+

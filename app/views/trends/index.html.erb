@@ -1,3 +1,5 @@
-<h1>Trends#index</h1>
-<p>Find me in app/views/trends/index.html.erb</p>
-<%= @content %>
+
+
+<% @inside_jobs.each do |inside_job| %>
+	<%= inside_job.title %> <hr />
+<% end %>

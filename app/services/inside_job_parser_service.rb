@@ -8,17 +8,30 @@ class InsideJobParserService
 	end
 
 	def parse
-		doc = Nokogiri::HTML(open(@url))
-		@html =  doc.css('h1').first.text
+		doc = Nokogiri::HTML(open("http://jobs.inside.com.tw/#{@url}"))
 
+		@html =  doc.css('h1').first.text
+	
 		@title = @html.split("\n")[0]
 		@salary = @html.split("\n")[2]
 
-		@salary_from = @salary[ @salary.index("NT$ ") + 4, @salary.index(" ~ ") - @salary.index("NT$ ") - 4]
-		@salary_end = @salary[ @salary.index("~ NT$ ") + 6, @salary.length - @salary.index("~ NT$ ") ]
+		#@salary_from = @salary[ @salary.index("NT$ ") + 4, @salary.index(" ~ ") - @salary.index("NT$ ") - 4 ]
+		#@salary_end = @salary[ @salary.index("~ NT$ ") + 6, @salary.length - @salary.index("~ NT$ ") ]
 
-		if !InsideJob.find_by({ :url => @url })
-			InsideJob.create({:title => @title, :salary_form => @salary_form, :salary_end => @salary_end, :url => @url })
-		end
+
+		@date =  doc.css('.date').first.text
+		@date = @date.split("\n")
+
+		@post_date = @date[2]
+		@effective_date = @date[4]
+
+		@inside_job = InsideJob.find_by({ :url => @url })
+
+		#if @inside_job.title.blank?
+		@inside_job.update_attributes({:title => @title, :salary => @salary,  :url => @url, :post_date => @post_date, :effective_date => @effective_date })
+		#end
+
+
+
 	end
 end
