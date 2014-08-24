@@ -1,14 +1,14 @@
-# 最新網路業和資訊業薪資趨勢
+## 最新網路業和資訊業薪資趨勢
 
 <img src="https://dl.dropboxusercontent.com/u/75986505/GitHub/inside_job_trends/cover.png" />
 
-#根據inside job的資料
+根據inside job的資料
 
 http://jobs.inside.com.tw/
 
 來產生最新的網路業和資訊業的薪資趨勢圖
 
-#webiste : 
+## webiste : 
 
 http://inside-job-trends.herokuapp.com/
  
@@ -16,11 +16,13 @@ http://inside-job-trends.herokuapp.com/
 
 #Contributing
 
-Fork it
-Create your feature branch (git checkout -b my-new-feature)
-Commit your changes (git commit -am 'Add some feature')
-Push to the branch (git push origin my-new-feature)
-Create new Pull Request
-Issues
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
 
-If you have problems, please create a Github issue.
+
+## Issues
+
+If you have problems, please create a [Github issue](https://github.com/xdite/66kjobs/issues).
