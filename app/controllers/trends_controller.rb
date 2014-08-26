@@ -19,7 +19,7 @@ private
 
   def get_inside_all_jobs_url
 
-  	(1..100).each do |page|
+  	(1..5).each do |page|
   		@inside_job_url_parser_service = InsideJobUrlParserService.new("http://jobs.inside.com.tw/jobs/page/#{page}")
   		@inside_job_url_parser_service.parse
 		end 
