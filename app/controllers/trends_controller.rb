@@ -6,7 +6,7 @@ class TrendsController < ApplicationController
   end
 
   def analysis
-		get_inside_all_jobs_url
+		get_inside_all_jobs_url(params[:pages])
 
   	get_all_inside_jobs_infomation
 
@@ -17,9 +17,9 @@ class TrendsController < ApplicationController
 private
 
 
-  def get_inside_all_jobs_url
+  def get_inside_all_jobs_url(pages)
 
-  	(1..1).each do |page|
+  	1.upto(pages.to_i) do |page|
   		@inside_job_url_parser_service = InsideJobUrlParserService.new("http://jobs.inside.com.tw/jobs/page/#{page}")
   		@inside_job_url_parser_service.parse
 		end 
