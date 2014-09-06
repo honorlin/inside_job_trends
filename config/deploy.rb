@@ -11,7 +11,7 @@ set :application, "inside_job_trends"
 set :repository,  "git@github.com:honorlin/#{application}.git"
 set :deploy_to, "/home/deploy/#{application}"
 
-set :branch, "develop"
+set :branch, "master"
 set :scm, :git
 
 set :user, "deploy"
