@@ -1,0 +1,15 @@
+defaults: &defaults
+  app_secret_key: 21282bd557b224721f44b8a8ee7c7b5ecc1aa33bd2aae567cd82ae7bdb4cc7ff56da37271d7fee04465b9642caa4c7a6f9ff1558840dc347b6e233cff247cc7e
+  watch_code_length: 8
+  watch_enable_hours: 4
+
+development:
+  <<: *defaults
+  env_secret: 21282bd557b224721f44b8a8ee7c7b5ecc1aa33bd2aae567cd82ae7bdb4cc7ff56da37271d7fee04465b9642caa4c7a6f9ff1558840dc347b6e233cff247cc7e
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
+  env_secret: 21282bd557b224721f44b8a8ee7c7b5ecc1aa33bd2aae567cd82ae7bdb4cc7ff56da37271d7fee04465b9642caa4c7a6f9ff1558840dc347b6e233cff247cc7e
