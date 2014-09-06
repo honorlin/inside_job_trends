@@ -2,9 +2,9 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.0'
+gem 'rails', '4.1.1'
 
-gem 'pg', group: :production
+gem 'mysql2', group: :production
 
 gem 'sqlite3', group: :development
 # Use SCSS for stylesheets
@@ -31,6 +31,20 @@ gem 'spring',        group: :development
 gem 'nokogiri'
 
 gem 'rails_12factor'
+
+gem 'settingslogic'
+
+gem 'whenever'
+
+group :development do 
+  gem "letter_opener"
+  gem "capistrano", "2.15.5"
+  gem "capistrano-ext"
+  gem "rvm-capistrano"
+  gem "cape"
+  gem "better_errors"
+  gem "annotate"
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
