@@ -1,4 +1,4 @@
-## 最新網路業和資訊業薪資趨勢
+#最新網路業和資訊業薪資趨勢
 
 <img src="https://dl.dropboxusercontent.com/u/75986505/GitHub/inside_job_trends/cover.png" />
 
@@ -8,11 +8,17 @@ http://jobs.inside.com.tw/
 
 來產生最新的網路業和資訊業的薪資趨勢圖
 
-# webiste : 
+#webiste : 
 
 http://jobs.eliving.co/
  
 歡迎有興趣的一起開發
+
+#Development
+
+rails runner AnalysisService.perform
+
+可以自動同步一部份資料
 
 #Contributing
 
