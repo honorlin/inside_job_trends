@@ -10,6 +10,7 @@ class TrendsController < ApplicationController
 			@inside_jobs = @inside_jobs.ignore_keyword(keyword)
 		end
 
+		@in_effect_counts = @inside_jobs.count
 
 
   end
