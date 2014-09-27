@@ -17,7 +17,7 @@ private
   end
 
   def self.get_all_inside_jobs_infomation
-  	@inside_jobs = InsideJob.select(:url).where({ :title => nil })
+  	@inside_jobs = Job.select(:url).where({ :title => nil })
   	@inside_jobs.each do |inside_job|
 			inside_job_parser_serice = InsideJobParserService.new(inside_job.url)
   		inside_job_parser_serice.parse

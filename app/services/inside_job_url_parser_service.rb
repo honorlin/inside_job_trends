@@ -17,8 +17,8 @@ class InsideJobUrlParserService
 			match_url = /jobs\/.+/.match(url)[0]
 			job_url = match_url[0, match_url.length - 2]
 			
-			if !InsideJob.find_by({ :url => job_url })
-				InsideJob.create({ :url => job_url})	
+			if !Job.find_by({ :url => job_url })
+				Job.create({ :url => job_url})	
 			end
 		end
 

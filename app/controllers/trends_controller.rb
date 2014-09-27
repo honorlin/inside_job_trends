@@ -4,13 +4,13 @@ class TrendsController < ApplicationController
 
   def index
 
- 		@inside_jobs = InsideJob.in_effect
+ 		@jobs = Job.in_effect
 
 		IGNORE_KEYWORD.each do |keyword|
-			@inside_jobs = @inside_jobs.ignore_keyword(keyword)
+			@jobs = @jobs.ignore_keyword(keyword)
 		end
 
-		@in_effect_counts = @inside_jobs.count
+		@in_effect_counts = @jobs.count
 
 
   end

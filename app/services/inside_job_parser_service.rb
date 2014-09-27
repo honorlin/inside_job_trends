@@ -26,7 +26,7 @@ class InsideJobParserService
 		@post_date = @date[2]
 		@effective_date = @date[4]
 
-		@inside_job = InsideJob.find_by({ :url => @url })
+		@inside_job = Job.find_by({ :url => @url })
 
 		#if @inside_job.title.blank?
 		@inside_job.update_attributes({ :company => @company , :title => @title, :salary => @salary,  :url => @url, :post_date => @post_date, :effective_date => @effective_date })

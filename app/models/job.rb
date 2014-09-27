@@ -1,4 +1,4 @@
-class InsideJob < ActiveRecord::Base
+class Job < ActiveRecord::Base
 	default_scope { order(:post_date => :desc) }
 
 	def self.ignore_keyword(keyword)

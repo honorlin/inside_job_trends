@@ -9,13 +9,13 @@
 		<th>有效日期</th>
 	</tr>
 	<tbody>
-		<% @inside_jobs.each do |inside_job| %>
+		<% @jobs.each do |job| %>
 			<tr>
-				<td><%= inside_job.company %></td>
-				<td><%= link_to inside_job.title, "http://jobs.inside.com.tw/#{inside_job.url}" %></td>
-				<td width="38%"><strong><%= inside_job.salary %></strong></td>
-				<td><span class="btn btn-success"><%= inside_job.post_date %></span></td>
-				<td><span class="btn btn-warning"><%= inside_job.effective_date %></span></td>
+				<td><%= job.company %></td>
+				<td><%= link_to job.title, "http://jobs.inside.com.tw/#{job.url}" %></td>
+				<td width="38%"><strong><%= job.salary %></strong></td>
+				<td><span class="btn btn-success"><%= job.post_date %></span></td>
+				<td><span class="btn btn-warning"><%= job.effective_date %></span></td>
 			</tr>
 		<% end %>
 	</tbody>
