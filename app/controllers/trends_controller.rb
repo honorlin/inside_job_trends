@@ -1,6 +1,6 @@
 class TrendsController < ApplicationController
 
-	IGNORE_KEYWORD= [ "茶", "性" , "男", "女", "小三", "LINE", "妹", "全套" ]
+	IGNORE_KEYWORD= [ "茶", "性" , "男", "女", "小三", "LINE", "妹", "全套", "Make Love" ]
 
   def index
 
