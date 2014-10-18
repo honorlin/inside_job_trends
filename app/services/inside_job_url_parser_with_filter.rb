@@ -8,16 +8,24 @@ class InsideJobUrlParserWithFilter
 	end
 
 	def call
-		html = Nokogiri::HTML(open(@url))
 
-		html.css('li.job').each do |job|
-			company_name = job.css(".role h3").text	
-			job_url = job.css("a")[0]["href"]
+		begin
 
-			unless is_filted(company_name)
-				Job.create({ :url => job_url}) if !Job.find_by({ :url => job_url })
+			html = Nokogiri::HTML(open(@url))
+
+			html.css('li.job').each do |job|
+				company_name = job.css(".role h3").text	
+				job_url = job.css("a")[0]["href"]
+
+				unless is_filted(company_name)
+					Job.create({ :url => job_url}) if !Job.find_by({ :url => job_url })
+				end
+
 			end
 
+		rescue Exception => e
+			Rails.logger.info e.message
+			Rails.logger.info @url		
 		end
 
 	end
