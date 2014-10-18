@@ -2,8 +2,8 @@ class TrendsController < ApplicationController
 
 	PANEL_SHOW = {
 
-		"前端工程師" => [ "前端" "frontend", "front-end", "front end" ],
-		"後端工程師" => [ "後端", "backend", "back-end", "back end" ],
+		"前端工程師" => [ "前端", "frontend" ],
+		"後端工程師" => [ "後端", "backend" ],
 		"視覺設計師" => [ "視覺", "設計師" ],
 		"平面設計師" => [ "	平面" ],
 		"行銷" => [ "行銷" ],
@@ -26,7 +26,7 @@ class TrendsController < ApplicationController
 		"Android" => [ "android" ],
 		"JaveScript" => [ "JaveScript" ],
 		"UX/UI Designer" => [ "ui", "ux" ],
-		"TechLeader" => [ "lead", "leader", "總監" ],
+		"TechLeader" => [ "lead" ],
 		"Embedded" => [ "embedded"]
 	}
 
