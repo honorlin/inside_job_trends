@@ -9,7 +9,7 @@
 #
 every 1.hours do
 #   command "/usr/bin/some_great_command"
-	runner "AnalysisService.perform"
+	runner "AnalysisService.perform(3)"
 #   rake "some:great:rake:task"
 end
 #

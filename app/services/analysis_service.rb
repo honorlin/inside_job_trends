@@ -1,8 +1,8 @@
 class AnalysisService
 
 
-	def self.perform
-		AnalysisService::get_inside_all_jobs_url(3)
+	def self.perform(pages)
+		AnalysisService::get_inside_all_jobs_url(pages)
   	AnalysisService::get_all_inside_jobs_infomation
 	end
 
