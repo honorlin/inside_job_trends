@@ -44,6 +44,8 @@ group :development do
   gem "cape"
   gem "better_errors"
   gem "annotate"
+  gem 'meta_request'
+  gem 'binding_of_caller'
 end
 
 # Use ActiveModel has_secure_password
