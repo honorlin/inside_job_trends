@@ -24,7 +24,7 @@ class TrendsController < ApplicationController
 		"Java" => [ "java" ],
 		"iOS" => [ "ios" ],
 		"Android" => [ "android" ],
-		"JaveScript" => [ "JaveScript" ],
+		"JaveScript" => [ "JavaScript" ],
 		"UX/UI Designer" => [ "ui", "ux" ],
 		"TechLeader" => [ "lead", "leader", "總監" ],
 		"Embedded" => [ "embedded"]
