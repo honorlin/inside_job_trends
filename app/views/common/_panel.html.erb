@@ -1,9 +1,9 @@
 
 
 <span class="label label-primary">目前有效職缺<%= @in_effect_counts %></span>
-<span class="label label-info"><a href="/">全部</a></span>
+<span class="label"><a href="/">全部/ALL</a></span>
 <%  @shows.each do |key, value| %>
-	<span class="label label-info"><a href="/?q=<%= key %>"><%= key %>(<%= value %>)</a></span>
+	<span class="label"><a href="/?q=<%= key %>"><%= key %>(<%= value %>)</a></span>
 <% end %>
 
 <hr/>

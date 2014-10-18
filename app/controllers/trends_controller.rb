@@ -2,10 +2,22 @@ class TrendsController < ApplicationController
 
 	PANEL_SHOW = {
 
-		"前端工程師" => [ "前端" ],
-		"後端工程師" => [ "後端" ],
+		"前端工程師" => [ "前端" "frontend", "front-end", "front end" ],
+		"後端工程師" => [ "後端", "backend", "back-end", "back end" ],
+		"視覺設計師" => [ "視覺", "設計師" ],
+		"平面設計師" => [ "	平面" ],
+		"行銷" => [ "行銷" ],
+		"客服" => [ "客服" ],
+		"外商" => [ "外商" ],
+		"美商" => [ "美商" ],
+		"業務" => [ "業務", "sales" ],
+		"企劃" => [ "企劃" ],
+		"文案編輯" => [ "編輯" ],
+		"工讀生" => [ "工讀" ],
+		"實習生" => [ "實習" ],
+		"新創公司" => [ "新創", "startup" ],
 		"Ruby on Rails" => [ "rails" ],
-		"NodeJs" => [ "nodejs" ],
+		"Node.is" => [ "nodejs", "node.js" ],
 		"Python" => [ "python" ],
 		"PHP" => [ "php" ],
 		".NET" => [ ".net" ],
@@ -13,8 +25,9 @@ class TrendsController < ApplicationController
 		"iOS" => [ "ios" ],
 		"Android" => [ "android" ],
 		"JaveScript" => [ "JaveScript" ],
-		"外商" => [ "外商" ],
-		"美商" => [ "美商" ]
+		"UX/UI Designer" => [ "ui", "ux" ],
+		"TechLeader" => [ "lead", "leader", "總監" ],
+		"Embedded" => [ "embedded"]
 	}
 
 
