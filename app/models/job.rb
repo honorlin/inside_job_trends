@@ -10,13 +10,15 @@ class Job < ActiveRecord::Base
 	end
 
 	def self.get_class_data(keywords)
-			job = in_effect
-			keywords.each { |keyword| job = job.with_contains_keyword(keyword) }
-			job
+		job = in_effect
+		condition = ""
+		keywords.each { |keyword| condition += with_contains_keyword(keyword)}
+		condition = condition[0 , condition.length - 3 ]
+		job.where(condition)
 	end
 
 	def self.with_contains_keyword(keyword)
-		where("lower(job_info) LIKE ?", "%#{keyword.downcase}%")
+		"lower(job_info) LIKE '%#{keyword.downcase}%' or "
 	end
 
 
