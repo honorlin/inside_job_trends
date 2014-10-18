@@ -17,7 +17,7 @@ class TrendsController < ApplicationController
 		"實習生" => [ "實習" ],
 		"新創公司" => [ "新創", "startup" ],
 		"Ruby on Rails" => [ "rails" ],
-		"Node.is" => [ "nodejs", "node.js" ],
+		"Node.js" => [ "nodejs", "node.js" ],
 		"Python" => [ "python" ],
 		"PHP" => [ "php" ],
 		".NET" => [ ".net" ],
