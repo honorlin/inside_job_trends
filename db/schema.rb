@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141018071353) do
+ActiveRecord::Schema.define(version: 20141018133656) do
 
   create_table "jobs", force: true do |t|
     t.string   "title"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20141018071353) do
     t.text     "job_info"
     t.text     "apply_info"
     t.string   "annual_salary"
+    t.string   "company_url"
   end
 
 end

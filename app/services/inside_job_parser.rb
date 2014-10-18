@@ -32,7 +32,7 @@ class InsideJobParser
 			if @inside_job.title.blank?
 				@inside_job.update_attributes(
 					:company => @company, 
-					:url => @company_url,
+					:company_url => @company_url,
 					:title => @title,
 					:job_class => @job_class,
 					:salary => @salary,
