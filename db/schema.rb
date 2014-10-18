@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140927163917) do
+ActiveRecord::Schema.define(version: 20141018071353) do
 
   create_table "jobs", force: true do |t|
     t.string   "title"
-    t.string   "salary_form"
+    t.string   "salary_from"
     t.string   "salary_end"
     t.text     "url",            limit: 255
     t.string   "post_date"
@@ -24,7 +24,11 @@ ActiveRecord::Schema.define(version: 20140927163917) do
     t.datetime "updated_at"
     t.string   "salary"
     t.string   "company"
-    t.text     "job_content"
+    t.string   "job_class"
+    t.string   "location"
+    t.text     "job_info"
+    t.text     "apply_info"
+    t.string   "annual_salary"
   end
 
 end
