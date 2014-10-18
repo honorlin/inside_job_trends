@@ -2,6 +2,7 @@ defaults: &defaults
   app_secret_key: 21282bd557b224721f44b8a8ee7c7b5ecc1aa33bd2aae567cd82ae7bdb4cc7ff56da37271d7fee04465b9642caa4c7a6f9ff1558840dc347b6e233cff247cc7e
   watch_code_length: 8
   watch_enable_hours: 4
+  filter_keywords: <%= %w(茶 性  男 女 小三 LINE 妹 全套 Make Love 夜 情 姐 妹 0 約 送) %>
 
 development:
   <<: *defaults
