@@ -9,10 +9,10 @@ class Job < ActiveRecord::Base
 		where("effective_date > ?", Time.now)
 	end
 
-	def self.get_keywords_count(keywords)
+	def self.get_class_data(keywords)
 			job = in_effect
 			keywords.each { |keyword| job = job.with_contains_keyword(keyword) }
-			job.count
+			job
 	end
 
 	def self.with_contains_keyword(keyword)

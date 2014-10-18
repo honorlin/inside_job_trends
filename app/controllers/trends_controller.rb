@@ -20,24 +20,24 @@ class TrendsController < ApplicationController
 
   def index
 
- 		@jobs = Job.in_effect
-
-		Settings.filter_keywords.each do |keyword|
-			@jobs = @jobs.ignore_company_keyword(keyword)
+  	if params["q"]
+			@jobs = Job.get_class_data(PANEL_SHOW[params["q"]])
+		else
+	 		@jobs = Job.in_effect
 		end
 
+		Settings.filter_keywords.each { |keyword| @jobs = @jobs.ignore_company_keyword(keyword) }			
 		@in_effect_counts = @jobs.count
 
-		@shows = {}
-	
+		panel
+
+  end
+
+  def panel
+  	@shows = {}
 		PANEL_SHOW.each do |key, value|
-			@shows[key] = Job.get_keywords_count(value)
+			@shows[key] = Job.get_class_data(value).count
 		end
-
-
-
-		Rails.logger.info @shows.to_s
-
   end
 
 
