@@ -18,7 +18,7 @@ class Job < ActiveRecord::Base
 	end
 
 	def self.with_contains_keyword(keyword)
-		"lower(job_info) LIKE '%#{keyword.downcase}%' or "
+		"lower(job_info) LIKE '%#{keyword.downcase}%' or lower(title) LIKE '%#{keyword.downcase}%' or "
 	end
 
 
