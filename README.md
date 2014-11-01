@@ -10,7 +10,7 @@ http://jobs.inside.com.tw/
 
 #webiste : 
 
-http://jobs.ten01.co/
+http://jobs.ten01.net/
  
 歡迎有興趣的一起開發
 
