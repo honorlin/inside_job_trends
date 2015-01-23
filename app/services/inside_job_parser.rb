@@ -22,8 +22,8 @@ class InsideJobParser
 			@salary_end = @salary.split("~")[1].split("，")[0].gsub("NT$", "").gsub(" ", "")
 			@annual_salary = @salary.split("~")[1].split("，")[1].gsub("年薪可達", "").gsub("NT$", "").gsub(" ", "") if @salary.split("~")[1].split("，")[1]
 			@location = html.css(".content .location").text
-			@post_date = html.css(".content .date").inner_html.split("\n")[2]
-			@effective_date = html.css(".content .date").inner_html.split("\n")[4]
+		  @post_date = html.css(".content .date").inner_html.split("\n")[3].strip!
+			@effective_date = html.css(".content .date").inner_html.split("\n")[5].strip!
 			@job_info = html.css("#job-info").inner_html
 			@apply_info = html.css("#apply-info").inner_html
 
