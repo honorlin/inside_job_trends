@@ -31,7 +31,11 @@ class TrendsController < ApplicationController
 		"台北" => [ "台北", "taipei" ],
 		"台中" => [ "台中", "taichung" ],
 		"台南" => [ "台南", "tainan" ],
-		"高雄" => [ "高雄", "kaohsiung" ]
+		"高雄" => [ "高雄", "kaohsiung" ],
+		"新北" => [ "新北" ],
+		"新竹" => [ "新竹" ],
+		"舊金山" => [ "舊金山" ]
+
 	}
 
 
