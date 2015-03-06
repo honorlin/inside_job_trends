@@ -5,6 +5,7 @@
 		<th>刊登公司</th>
 		<th>職缺</th>
 		<th>薪資</th>
+		<th>地點</th>
 		<th>刊登時間</th>
 		<th>有效日期</th>
 	</tr>
@@ -14,6 +15,7 @@
 				<td><%= job.company %></td>
 				<td><%= link_to job.title, "http://jobs.inside.com.tw#{job.url}" %></td>
 				<td width="38%"><strong><%= job.salary %></strong></td>
+				<td><%= job.location %></td>
 				<td><span class="label label-success"><%= job.post_date %></span></td>
 				<td><span class="label label-warning"><%= job.effective_date %></span></td>
 			</tr>

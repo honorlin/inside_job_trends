@@ -27,7 +27,11 @@ class TrendsController < ApplicationController
 		"JaveScript" => [ "JavaScript" ],
 		"UX/UI Designer" => [ "ui", "ux" ],
 		"TechLeader" => [ "lead", "leader", "總監" ],
-		"Embedded" => [ "embedded"]
+		"Embedded" => [ "embedded"],
+		"台北" => [ "台北", "taipei" ],
+		"台中" => [ "台中", "taichung" ],
+		"台南" => [ "台南", "tainan" ],
+		"高雄" => [ "高雄", "kaohsiung" ]
 	}
 
 
