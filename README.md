@@ -8,12 +8,6 @@ http://jobs.inside.com.tw/
 
 來產生最新的網路業和資訊業的薪資趨勢圖
 
-#webiste : 
-
-http://jobs.ten01.net/
- 
-歡迎有興趣的一起開發
-
 #Development
 
 rails runner AnalysisService.perform
